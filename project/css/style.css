@@ -1,0 +1,261 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+list-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Шрифты */
+@font-face {
+  font-family: "Open Sans";
+  src: local(OpenSansRegular),
+    url('../fonts/OpenSansRegular.woff2') format('woff2'),
+    url('../fonts/OpenSansRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local(OpenSansSemiBold),
+    url('../fonts/OpenSansSemiBold.woff2') format('woff2'),
+    url('../fonts/OpenSansSemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local(OpenSansBold),
+    url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Переменные */
+:root {
+  --white-color: #ffffff;
+  --white-medium-color: #ececec;
+  --white-dark-color: #cacaca;
+  --red-color: #d11616;
+  --blue-color: #26a5e4;
+  --green-color: #30bf39;
+  --violet-color: #7943a4;
+  --violet-dark-color: #9d5cd0;
+  --violet-medium-color: #c283f3;
+  --violet-light-color: #d1a9f0;
+  --grey-color: #999999;
+  --grey-dark-color: #666666;
+  --black-color: #000000;
+  --black-light-color: #333333;
+}
+
+/* Глобально */
+body {
+  min-width: 320px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: var(--white-color);
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* А-ля миксины */
+.container {
+  margin: 0 auto;
+  padding: 0 159px 0 160px;
+  max-width: 1920px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 98px;
+}
+
+/* Модификаторы */
+.btn--purple {
+  padding: 22px 35px;
+  background-color: #9D5CD0;
+  border-radius: 100px;
+}
+
+/* Header */
+/* Меню */
+.header {
+  position: relative;
+  z-index: 200;
+}
+
+.menu {
+  background-color: var(--black-color);
+}
+
+.menu__container {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 18px;
+}
+
+.menu__logo {
+  margin-right: 179px;
+  transition: outline .2s;
+}
+
+.menu__logo:focus {
+  outline-offset: 3px;
+  outline: 1px solid var(--violet-color);
+}
+
+.menu__list {
+  display: flex;
+  width: 47.2%;
+  justify-content: space-between;
+}
+
+.menu__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 38px;
+  transition: color .2s, background-color .2s;
+}
+
+.menu__link:focus {
+  outline: none;
+  background-color: var(--violet-color);
+}
+
+.menu__link:hover {
+  color: var(--violet-medium-color);
+}
+
+.menu__link:active {
+  color: var(--violet-color);
+  background-color: inherit;
+}
+
+.menu__enter {
+  margin-left: auto;
+}
+
+.menu__enter-icon {
+  transition: background-color .2s;
+}
+
+.menu__enter-icon span {
+  margin-left: 3px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+  transition: color .2s;
+}
+
+.menu__enter-icon svg path {
+  transition: fill .2s;
+}
+
+.menu__enter:focus {
+  outline: none;
+}
+
+.menu__enter:focus .menu__enter-icon {
+  background-color: var(--violet-color);
+}
+
+.menu__enter:hover .menu__enter-icon span {
+  color: var(--violet-medium-color);
+}
+
+.menu__enter:hover .menu__enter-icon svg path {
+  fill: var(--violet-medium-color);
+}
+
+.menu__enter:active .menu__enter-icon span {
+  color: var(--violet-color);
+}
+
+.menu__enter:active .menu__enter-icon {
+  background-color: inherit;
+}
+
+.menu__enter:active .menu__enter-icon svg path {
+  fill: var(--violet-color);
+}
+
+/* Подменю */
+.submenu {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.submenu__container {
+  padding-top: 23px;
+  padding-bottom: 22px;
+}
+
+/* Хироу */
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../img/hero-1.jpg');
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+.hero__container {
+  padding-top: 234px;
+  padding-bottom: 100px;
+  height: 800px;
+  width: 1920px;
+}
+
+.hero__title {
+  margin-bottom: -3px;
+  max-width: 600px;
+}
+
+.hero__text {
+  margin: 0;
+  margin-bottom: 90px;
+  max-width: 550px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 167%;
+}
+
+.hero__btn {}
