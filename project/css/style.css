@@ -65,6 +65,7 @@ list-reset {
   --grey-dark-color: #666666;
   --black-color: #000000;
   --black-light-color: #333333;
+  --background-color-submenu: rgba(0, 0, 0, 0.5);
 }
 
 /* Глобально */
@@ -93,6 +94,7 @@ button::-moz-focus-inner {
 }
 
 .btn {
+  border: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
@@ -104,13 +106,6 @@ button::-moz-focus-inner {
   font-weight: 700;
   font-size: 72px;
   line-height: 98px;
-}
-
-/* Модификаторы */
-.btn--purple {
-  padding: 22px 35px;
-  background-color: #9D5CD0;
-  border-radius: 100px;
 }
 
 /* Header */
@@ -127,15 +122,15 @@ button::-moz-focus-inner {
 .menu__container {
   display: flex;
   padding-top: 30px;
-  padding-bottom: 18px;
+  padding-bottom: 27px;
 }
 
-.menu__logo {
+.logo {
   margin-right: 179px;
   transition: outline .2s;
 }
 
-.menu__logo:focus {
+.logo:focus {
   outline-offset: 3px;
   outline: 1px solid var(--violet-color);
 }
@@ -217,12 +212,288 @@ button::-moz-focus-inner {
 
 /* Подменю */
 .submenu {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--background-color-submenu);
 }
 
 .submenu__container {
   padding-top: 23px;
   padding-bottom: 22px;
+}
+
+.submenu__list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 64.5%;
+}
+
+.submenu__item {
+  position: relative;
+}
+
+.select-open {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white-color);
+  cursor: pointer;
+  transition: color .2s, background-color .2s;
+}
+
+.select-open svg {
+  margin-left: -3px;
+  transition: transform .2s;
+}
+
+.select-open svg path {
+  transition: stroke .2s;
+}
+
+.select-open:focus {
+  outline: none;
+  background-color: var(--violet-color);
+}
+
+.select-open:hover {
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--violet-dark-color);
+}
+
+.select-open:hover svg path {
+  stroke: var(--violet-dark-color);
+}
+
+.select-open:active {
+  color: var(--violet-color);
+  background-color: inherit;
+}
+
+.select-open:active svg path {
+  stroke: var(--violet-color);
+}
+
+.select-open:active svg {
+  transform: rotate(180deg);
+}
+
+/* Select dropdown */
+.submenu__drop,
+.submenu__drop-2,
+.submenu__drop-3,
+.submenu__drop-4,
+.submenu__drop-5 {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu__drop--active,
+.submenu__drop-2--active,
+.submenu__drop-3--active,
+.submenu__drop-4--active,
+.submenu__drop-5--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.select-dropdown {
+  padding: 40px;
+  background-color: var(--background-color-submenu);
+}
+
+.select-dropdown__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.select-dropdown__link {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--white-color);
+  border: 2px solid transparent;
+  transition: border .2s;
+}
+
+.select-dropdown__link:hover,
+.select-dropdown__link:focus {
+  border: 2px solid var(--violet-dark-color);
+}
+
+.select-dropdown__link:focus {
+  outline: none;
+}
+
+.select-dropdown-image {
+  padding: 9px 50px 9px 13px;
+  width: 220px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .2s;
+}
+
+.select-dropdown-image--1 {
+  background-image: url('../img/tintoretto.png');
+}
+
+.select-dropdown-image--1:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/tintoretto.png');
+}
+
+.select-dropdown-image--2 {
+  background-image: url('../img/friedrich.png');
+}
+
+.select-dropdown-image--2:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/friedrich.png');
+}
+
+.select-dropdown-image--3 {
+  background-image: url('../img/leonardo.png');
+}
+
+.select-dropdown-image--3:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/leonardo.png');
+}
+
+.select-dropdown-image--4 {
+  background-image: url('../img/verrokkyo.png');
+}
+
+.select-dropdown-image--4:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/verrokkyo.png');
+}
+
+.select-dropdown-image--5 {
+  background-image: url('../img/mone.png');
+}
+
+.select-dropdown-image--5:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/mone.png');
+}
+
+.select-dropdown-image--6 {
+  background-image: url('../img/sisley.png');
+}
+
+.select-dropdown-image--6:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/sisley.png');
+}
+
+.select-dropdown-image--7 {
+  background-image: url('../img/mane.png');
+}
+
+.select-dropdown-image--7:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/mane.png');
+}
+
+.select-dropdown-image--8 {
+  background-image: url('../img/renuar.png');
+}
+
+.select-dropdown-image--8:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/renuar.png');
+}
+
+.select-dropdown-image--9 {
+  background-image: url('../img/vangog.png');
+}
+
+.select-dropdown-image--9:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/vangog.png');
+}
+
+.select-dropdown-image--10 {
+  background-image: url('../img/sezann.png');
+}
+
+.select-dropdown-image--10:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/sezann.png');
+}
+
+.select-dropdown-image--11 {
+  background-image: url('../img/gogen.png');
+}
+
+.select-dropdown-image--11:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/gogen.png');
+}
+
+.select-dropdown-image--12 {
+  background-image: url('../img/sora.png');
+}
+
+.select-dropdown-image--12:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/sora.png');
+}
+
+.select-dropdown-image--13 {
+  background-image: url('../img/kandinskiy.png');
+}
+
+.select-dropdown-image--13:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/kandinskiy.png');
+}
+
+.select-dropdown-image--14 {
+  background-image: url('../img/marinetty.png');
+}
+
+.select-dropdown-image--14:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/marinetty.png');
+}
+
+.select-dropdown-image--15 {
+  background-image: url('../img/malevich.png');
+}
+
+.select-dropdown-image--15:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/malevich.png');
+}
+
+.select-dropdown-image--16 {
+  background-image: url('../img/picasso.png');
+}
+
+.select-dropdown-image--16:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/picasso.png');
+}
+
+.select-dropdown-image--17 {
+  background-image: url('../img/karra.png');
+}
+
+.select-dropdown-image--17:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/karra.png');
+}
+
+.select-dropdown-image--18 {
+  background-image: url('../img/pratella.png');
+}
+
+.select-dropdown-image--18:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/pratella.png');
+}
+
+.select-dropdown-image--19 {
+  background-image: url('../img/severini.png');
+}
+
+.select-dropdown-image--19:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/severini.png');
+}
+
+.select-dropdown-image--20 {
+  background-image: url('../img/balla.png');
+}
+
+.select-dropdown-image--20:active {
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url('../img/balla.png');
 }
 
 /* Хироу */
@@ -238,7 +509,7 @@ button::-moz-focus-inner {
 }
 
 .hero__container {
-  padding-top: 234px;
+  padding-top: 184px;
   padding-bottom: 100px;
   height: 800px;
   width: 1920px;
@@ -251,11 +522,34 @@ button::-moz-focus-inner {
 
 .hero__text {
   margin: 0;
-  margin-bottom: 90px;
+  margin-bottom: 91px;
   max-width: 550px;
   font-weight: 700;
   font-size: 18px;
   line-height: 167%;
 }
 
-.hero__btn {}
+/* Модификаторы */
+.btn--purple {
+  padding: 20px 33px;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  background-color: #9D5CD0;
+  transition: border .2s, background-color .2s, outline .2s;
+}
+
+.btn--purple:focus {
+  border: 3px solid transparent;
+  outline-offset: 5px;
+  outline: 2px solid var(--violet-medium-color);
+}
+
+.btn--purple:hover {
+  border: 3px solid var(--violet-light-color);
+}
+
+.btn--purple:active {
+  border: 3px solid var(--violet-light-color);
+  outline: none;
+  background-color: var(--violet-color);
+}
