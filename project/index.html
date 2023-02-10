@@ -2,12 +2,17 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blanchard</title>
-  <link rel="icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
 
@@ -18,9 +23,9 @@
         <div class="menu__container container">
           <a href="#" class="logo">
             <picture>
-              <source srcset="img/logo-320px.svg" media="(max-width: 320px)">
-              <source srcset="img/logo-1024-768px.svg" media="(max-width: 1024px)">
-              <img src="img/logo-1920px.svg" alt="Логотип Blanchard">
+              <source srcset="img/logo-320px.svg" media="(max-width: 320px)" />
+              <source srcset="img/logo-1024-768px.svg" media="(max-width: 1024px)" />
+              <img src="img/logo-1920px.svg" alt="Логотип Blanchard" />
             </picture>
           </a>
           <ul class="menu__list list-reset">
@@ -58,7 +63,6 @@
       <nav class="nav submenu">
         <div class="submenu__container container">
           <ul class="submenu__list list-reset">
-
             <li class="submenu__item">
               <a href="#" class="submenu__select select-open select-open--1">
                 Реализм
@@ -67,28 +71,70 @@
                 </svg>
               </a>
               <div class="submenu__drop select-dropdown">
-                <ul class="select-dropdown__list list-reset">
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--1">
-                      Тинторетто
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--2">
-                      Фридрирх
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--3">
-                      Леонардо
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--4">
-                      Верроккьо
-                    </a>
-                  </li>
-                </ul>
+                <div data-simplebar data-simplebar-auto-hide="false" class="submenu__scrollbar">
+                  <ul class="select-dropdown__list list-reset">
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--1">
+                        Тинторетто
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--2">
+                        Фридрирх
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--3">
+                        Леонардо
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--4">
+                        Верроккьо
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--1">
+                        Тинторетто
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--2">
+                        Фридрирх
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--3">
+                        Леонардо
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--4">
+                        Верроккьо
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--1">
+                        Тинторетто
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--2">
+                        Фридрирх
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--3">
+                        Леонардо
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--4">
+                        Верроккьо
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="submenu__item">
@@ -99,28 +145,50 @@
                 </svg>
               </a>
               <div class="submenu__drop-2 select-dropdown">
-                <ul class="select-dropdown__list list-reset">
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--5">
-                      Моне
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--6">
-                      Сислей
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--7">
-                      Мане
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--8">
-                      Ренуар
-                    </a>
-                  </li>
-                </ul>
+                <div data-simplebar data-simplebar-auto-hide="false" class="submenu__scrollbar">
+                  <ul class="select-dropdown__list list-reset">
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--5">
+                        Моне
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--6">
+                        Сислей
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--7">
+                        Мане
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--8">
+                        Ренуар
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--5">
+                        Моне
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--6">
+                        Сислей
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--7">
+                        Мане
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--8">
+                        Ренуар
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="submenu__item">
@@ -131,28 +199,50 @@
                 </svg>
               </a>
               <div class="submenu__drop-3 select-dropdown">
-                <ul class="select-dropdown__list list-reset">
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--9">
-                      Ван Гог
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--10">
-                      Сезанн
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--11">
-                      Гоген
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--12">
-                      Сёра
-                    </a>
-                  </li>
-                </ul>
+                <div data-simplebar data-simplebar-auto-hide="false" class="submenu__scrollbar">
+                  <ul class="select-dropdown__list list-reset">
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--9">
+                        Ван Гог
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--10">
+                        Сезанн
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--11">
+                        Гоген
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--12">
+                        Сёра
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--9">
+                        Ван Гог
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--10">
+                        Сезанн
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--11">
+                        Гоген
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--12">
+                        Сёра
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="submenu__item">
@@ -163,28 +253,50 @@
                 </svg>
               </a>
               <div class="submenu__drop-4 select-dropdown">
-                <ul class="select-dropdown__list list-reset">
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--13">
-                      Кандинский
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--14">
-                      Маринетти
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--15">
-                      Малевич
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--16">
-                      Пикассо
-                    </a>
-                  </li>
-                </ul>
+                <div data-simplebar data-simplebar-auto-hide="false" class="submenu__scrollbar">
+                  <ul class="select-dropdown__list list-reset">
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--13">
+                        Кандинский
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--14">
+                        Маринетти
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--15">
+                        Малевич
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--16">
+                        Пикассо
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--13">
+                        Кандинский
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--14">
+                        Маринетти
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--15">
+                        Малевич
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--16">
+                        Пикассо
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
             <li class="submenu__item">
@@ -195,31 +307,63 @@
                 </svg>
               </a>
               <div class="submenu__drop-5 select-dropdown">
-                <ul class="select-dropdown__list list-reset">
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--17">
-                      Карра
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--18">
-                      Прателла
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--19">
-                      Северини
-                    </a>
-                  </li>
-                  <li class="select-dropdown__item">
-                    <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--20">
-                      Балла
-                    </a>
-                  </li>
-                </ul>
+                <div data-simplebar data-simplebar-auto-hide="false" class="submenu__scrollbar">
+                  <ul class="select-dropdown__list list-reset">
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--17">
+                        Карра
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--18">
+                        Прателла
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--19">
+                        Северини
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--20">
+                        Балла
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--17">
+                        Карра
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--18">
+                        Прателла
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--19">
+                        Северини
+                      </a>
+                    </li>
+                    <li class="select-dropdown__item">
+                      <a href="#" class="select-dropdown__link select-dropdown-image select-dropdown-image--20">
+                        Балла
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>
+          <label class="submenu__search">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0967 18C7.53016 18 3.99668 14.3229 3.99668 10C3.99668 5.67715 7.53016 2 12.0967 2C16.6632 2 20.1967 5.67715 20.1967 10C20.1967 14.3229 16.6632 18 12.0967 18ZM12.0967 20C6.57383 20 2.09668 15.5228 2.09668 10C2.09668 4.47715 6.57383 0 12.0967 0C17.6195 0 22.0967 4.47715 22.0967 10C22.0967 15.5228 17.6195 20 12.0967 20Z"
+                fill="white" />
+            </svg>
+            <input type="text" class="submenu__input" placeholder="Поиск по сайту">
+          </label>
         </div>
       </nav>
     </div>
@@ -227,17 +371,26 @@
 
   <main>
     <section class="hero" id="about">
-      <div class="hero__container container">
-        <h1 class="hero__title section-title">Прикоснитесь к прекрасному</h1>
-        <p class="hero__text">
-          Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
-          для новых предложений
-        </p>
-        <button class="hero__btn btn btn--purple">Подписаться на рассылку</button>
+      <div class="hero__swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide--1"></div>
+          <div class="swiper-slide swiper-slide--2"></div>
+          <div class="swiper-slide swiper-slide--3"></div>
+        </div>
+        <div class="hero__container slide-content container">
+          <h1 class="slide-content__title section-title">Прикоснитесь к прекрасному</h1>
+          <p class="slide-content__text">
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация
+            намеченных плановых заданий создаёт предпосылки для новых
+            предложений
+          </p>
+          <button class="btn btn--purple">
+            Подписаться на рассылку
+          </button>
+        </div>
       </div>
     </section>
   </main>
-
 </body>
 
 </html>
