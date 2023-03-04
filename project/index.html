@@ -8,12 +8,15 @@
   <link rel="icon" href="img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 
   <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
   <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -371,11 +374,11 @@
 
   <main>
     <section class="hero" id="about">
-      <div class="hero__swiper swiper">
+      <div class="hero__swiper slider-1 swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-slide--1"></div>
-          <div class="swiper-slide swiper-slide--2"></div>
-          <div class="swiper-slide swiper-slide--3"></div>
+          <div class="swiper-slide swiper-slide-hero swiper-slide--1"></div>
+          <div class="swiper-slide swiper-slide-hero swiper-slide--2"></div>
+          <div class="swiper-slide swiper-slide-hero swiper-slide--3"></div>
         </div>
         <div class="hero__container slide-content container">
           <h1 class="slide-content__title section-title">Прикоснитесь к прекрасному</h1>
@@ -390,20 +393,10 @@
         </div>
       </div>
     </section>
-    <section class="about-us" id="about-us">
-      <div class="about-us__content container">
+    <section class="about-us">
+      <div class="about-us__content container" id="about-us">
         <h2 class="about-us__title main-title">O&nbsp;нас</h2>
         <p class="about-us__text">
-          <!-- Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
-          участника как способного принимать собственные решения касаемо распределения внутренних резервов
-          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечёт
-          за&nbsp;собой процесс внедрения и&nbsp;модернизации&nbsp;модели&nbsp;развития. Повседневная практика
-          показывает,
-          что
-          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
-          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
-          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
-          среди определённых слоёв населения, а&nbsp;значит, должны быть разоблачены. -->
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как&nbsp;способного принимать собственные решения касаемо распределения внутренних резервов
           и&nbsp;ресурсов.
@@ -418,6 +411,105 @@
           должны
           быть разоблачены.
         </p>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="gallery__container container">
+        <div class="gallery__form">
+          <h2 class="gallery__title main-title">Галерея</h2>
+          <form class="gallery__select form-select">
+            <label for="genre" class="genre">Фильтр:</label>
+            <select name="painting" id="genre" class="js-choice">
+              <option value="">Живопись</option>
+              <option value="Drawing">Рисунок</option>
+              <option value="sculpture">Скульпутура</option>
+            </select>
+          </form>
+          <form tabindex="0" class="gallery__checkbox form-checkbox">
+            <ul class="form-checkbox__list list-reset">
+              <li class="form-checkbox__item">
+                <label class="form-checkbox__label">
+                  <input type="checkbox" name="check" id="check-1" class="form-checkbox__input">
+                  XIX век
+                  <span class="form-checkbox__custom-input"></span>
+                </label>
+              </li>
+              <li class="form-checkbox__item">
+                <label class="form-checkbox__label">
+                  <input type="checkbox" name="check" id="check-2" class="form-checkbox__input">
+                  XX век
+                  <span class="form-checkbox__custom-input"></span>
+                </label>
+              </li>
+              <li class="form-checkbox__item">
+                <label class="form-checkbox__label">
+                  <input type="checkbox" name="check" id="check-3" class="form-checkbox__input">
+                  Современность
+                  <span class="form-checkbox__custom-input"></span>
+                </label>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="gallery__slider">
+          <div class="slider-2 swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide-gallery">
+                <picture class="swiper-picture">
+                  <source srcset="img/gallery-2-320px.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-2-768px.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-2-1024px.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-2.jpg" alt="Изображение картины 1">
+                </picture>
+              </div>
+              <div class="swiper-slide swiper-slide-gallery">
+                <picture class="swiper-picture">
+                  <source srcset="img/gallery-3-320px.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-3-768px.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-3-1024px.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-3.jpg" alt="Изображение картины 1">
+                </picture>
+              </div>
+              <div class="swiper-slide swiper-slide-gallery">
+                <picture class="swiper-picture">
+                  <source srcset="img/gallery-4-320px.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-4-768px.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-4-1024px.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-4.jpg" alt="Изображение картины 1">
+                </picture>
+              </div>
+              <div class="swiper-slide swiper-slide-gallery">
+                <picture class="swiper-picture">
+                  <source srcset="img/gallery-5-320px.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-5-768px.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-5-1024px.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-5.jpg" alt="Изображение картины 1">
+                </picture>
+              </div>
+              <div class="swiper-slide swiper-slide-gallery">
+                <picture class="swiper-picture">
+                  <source srcset="img/gallery-6-768px.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-6-1024px.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-6.jpg" alt="Изображение картины 1">
+                </picture>
+              </div>
+              <div class="swiper-slide swiper-slide-gallery">
+                <picture class="swiper-picture">
+                  <source srcset="img/gallery-1-320px.jpg" media="(max-width: 320px)">
+                  <source srcset="img/gallery-1-768px.jpg" media="(max-width: 768px)">
+                  <source srcset="img/gallery-1-1024px.jpg" media="(max-width: 1024px)">
+                  <img src="img/gallery-1.jpg" alt="Изображение картины 1">
+                </picture>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>

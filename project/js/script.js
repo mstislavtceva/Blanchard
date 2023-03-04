@@ -51,7 +51,7 @@ menuLinks.forEach(function (el) {
 });
 
 // Swiper
-const swiper = new Swiper(".swiper", {
+const slider1 = new Swiper(".slider-1", {
   loop: true,
   slidesPerView: 1,
   slidesPerGroup: 1,
@@ -59,4 +59,31 @@ const swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 5000,
   },
+});
+
+const slider2 = new Swiper(".slider-2", {
+  loop: true,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  spaceBetween: 50,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  // Сделать брейкпоинты!!
+});
+
+// Choices lib
+const element = document.querySelector(".js-choice");
+const choices = new Choices(element, {
+  allowHTML: true,
+  placeholder: true,
+  searchEnabled: false,
+  itemSelectText: "",
+  sorter: () => {},
 });
